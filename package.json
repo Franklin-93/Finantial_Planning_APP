@@ -1,0 +1,14 @@
+{
+  "name": "financial_planning_calculator",
+  "version": "1.0.0",
+  "description": "Finantial Planning Helper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "FRANKLIN",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.1.2"
+  }
+}

@@ -1,0 +1,103 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .waviy {
+    position: absolute;
+    margin-bottom:30%;
+  }
+  .waviy span {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+/* INTRO */
+
+ 
+.button-start{
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    margin-top: 400px;
+    background: #474747;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px #969797;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+   
+    transition: 0.5s;
+ }
+ a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    text-align: center;
+ }
+
+ a:hover{
+    color: #000000;
+    background: #07ffea;
+    font-size:15px;
+    font-style: italic;    
+   
+ }
+
+ .intro p{
+    color: aliceblue;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 15px;
+    text-align: justify;
+    border-left: 2px solid rgb(206, 205, 205);
+    padding: 40px;
+    margin-left: 35px;
+    animation: fadeInLeft 7s;
+ }
+
+ @keyframes fadeInLeft {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+ /*==============================*/
+
+#result{
+    animation:result 5s; 
+    background-color: beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 10px;
+    border-radius: 15px;
+}
+
+
+@keyframes result{
+    0%{opacity:0;}  
+    80%{opacity:0;}
+    100%{opacity:1;}
+    }
+   

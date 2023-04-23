@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles_2.css">
+    <title>CALCULATOR</title>
+</head>
+<body>
+
+
+
+
+
+    <div class = "box">
+        <h2>Calculator</h2>
+    <form class="form-inline-1">
+        <div>
+             <input type="text" id="item" required="This is required.">
+             <label>What would you like to buy ?</label>
+        </div>
+        <div>
+            <input type="text" id="price" required="This is required.">
+            <label>How much is the Item ?</label>
+        </div>
+       <div>
+        <input type="number" id="length" required="This is required.">
+        <label>Number of months to be paying it:</label>
+     </div>
+        
+    <div>
+            <button onclick="userInput()" class ="calculate" type="text">GO</button>
+    </div> 
+    </form>
+
+
+    <div class="results">
+         <p id="results-part1"></p>
+    </div>
+
+       
+    
+
+   <!-- <form class="form-inline-2">
+     <div>
+        <input type="text" id="item" required="This is required.">
+        <label>How much could you pay monthly?</label>
+     </div>
+        <div>
+            <button class ="calculate" type="text">Calculate</button>
+        </div>
+    </form>
+</div>-->
+    <script src="../app/js/renderer.js"></script>
+    <!--It will direct to home page-->
+    <a href="../renderer/index.html" onclick="">START OVER</a>
+    
+    <br>
+    <br>
+    <a class ="calculate" href="">Generate PDF</a>
+</body>
+</html>

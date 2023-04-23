@@ -1,0 +1,138 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(0, 0, 0);  
+    overflow: hidden;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgb(114, 121, 121);
+    border-radius: 10px;
+    background-color: #ebebeb;
+
+}
+
+.box h2{
+    margin: 0 0 40px;
+    padding: 0;
+    color:  #414141;
+    text-transform: uppercase;
+}
+
+.box input{
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+/*.box textarea{
+    height: 80px;
+    padding:10px 0;
+    margin-bottom: 40px;
+}*/
+
+.box input{
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid  #414141;
+    /**/
+    background-color:  #eceaea;
+
+}
+
+/*STYLING */
+.box button{
+    border-bottom: none;
+    cursor: pointer;
+    background-color: #414141;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px;
+}
+.calculate:hover{
+  cursor: pointer;
+  transition: 0.5s;
+  right: -20px;
+  transition: 1s;  
+  padding-right: 60px;
+  background-color: rgb(0, 0, 0);
+  font-style: italic;
+  
+}
+
+
+
+
+
+
+
+.box form div{
+    position: relative;
+}
+
+.box form div label{
+  position:absolute;  
+  left:0px;
+  /*padding-top: px;*/
+  pointer-events: none;
+  color:#746f6f;
+  transition: .5s;
+}
+
+.box input:focus ~ label,
+.box input:valid ~ label{
+  top: -20px;  
+  color:  #414141;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.box input:focus,
+.box input:valid{
+  border-bottom: 2px solid #4e4f50;;
+}
+
+
+
+
+/**/
+
+
+.results{
+    position: absolute;
+    margin-top: 25%;
+}
+
+
+@keyframes results-part1{
+    0%{opacity:0;}  
+    80%{opacity:0;}
+    100%{opacity:1;}
+    }
+   
+#results-part1{
+    background-color: #746f6f;
+    padding: 20px;
+    width: 500px;
+    animation:result 2.5s; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 10px;
+    border-radius: 15px;
+    color: #414141;
+}
