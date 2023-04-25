@@ -48,8 +48,15 @@
 
     cursor: pointer;
    
-    transition: 0.5s;
+    transition: 1s;
+    animation: fadeInLeft 3s;
+  }
+ 
+  @keyframes fadeInLeft {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
  }
+
  a{
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -62,8 +69,11 @@
  a:hover{
     color: #000000;
     background: #07ffea;
-    font-size:15px;
+    font-size:14px;
     font-style: italic;    
+    padding-right: 40px;
+    font-size: small;
+   
    
  }
 
@@ -77,7 +87,7 @@
     border-left: 2px solid rgb(206, 205, 205);
     padding: 40px;
     margin-left: 35px;
-    animation: fadeInLeft 7s;
+    animation: fadeInLeft 3s;
  }
 
  @keyframes fadeInLeft {

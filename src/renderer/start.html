@@ -8,57 +8,53 @@
     <link rel="stylesheet" href="../styles/styles_2.css">
     <title>CALCULATOR</title>
 </head>
-<body>
 
-
-
-
-
-    <div class = "box">
-        <h2>Calculator</h2>
-    <form class="form-inline-1">
+    <body>
+        <div class = "box">
+            <h2>Calculator</h2>
+        <form class="form-inline-1">
+            <div>
+                 <input type="text" id="item" required="This is required.">
+                 <label>What would you like to buy ?</label>
+            </div>
+            <div>
+                <input type="text" id="price" required="This is required.">
+                <label>How much is the Item ?</label>
+            </div>
+           <div>
+            <input type="number" id="length" required="This is required.">
+            <label>Number of months to be paying it:</label>
+         </div>
+    
         <div>
-             <input type="text" id="item" required="This is required.">
-             <label>What would you like to buy ?</label>
+                <button onclick="Go()" class ="calculate" type="text">GO</button>
+        </div> 
+        </form>
+
+        <div class="results">
+             <p id="results-part1"></p>
         </div>
-        <div>
-            <input type="text" id="price" required="This is required.">
-            <label>How much is the Item ?</label>
-        </div>
-       <div>
-        <input type="number" id="length" required="This is required.">
-        <label>Number of months to be paying it:</label>
-     </div>
+    
+    
+    
+    
+       <!-- <form class="form-inline-2">
+         <div>
+            <input type="text" id="item" required="This is required.">
+            <label>How much could you pay monthly?</label>
+         </div>
+            <div>
+                <button class ="calculate" type="text">Calculate</button>
+            </div>
+        </form>
+    </div>-->
         
-    <div>
-            <button onclick="userInput()" class ="calculate" type="text">GO</button>
-    </div> 
-    </form>
-
-
-    <div class="results">
-         <p id="results-part1"></p>
-    </div>
-
-       
+        <!--It will direct to home page-->
+        <a href="../renderer/index.html">START OVER</a>
     
-
-   <!-- <form class="form-inline-2">
-     <div>
-        <input type="text" id="item" required="This is required.">
-        <label>How much could you pay monthly?</label>
-     </div>
-        <div>
-            <button class ="calculate" type="text">Calculate</button>
-        </div>
-    </form>
-</div>-->
-    <script src="../app/js/renderer.js"></script>
-    <!--It will direct to home page-->
-    <a href="../renderer/index.html" onclick="">START OVER</a>
-    
-    <br>
-    <br>
-    <a class ="calculate" href="">Generate PDF</a>
-</body>
+        <br>
+        <br>
+        <a class ="calculate" href="">Generate PDF</a>
+        <script  src="../app/renderer.js"></script>
+    </body>
 </html>
