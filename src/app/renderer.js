@@ -1,7 +1,7 @@
 
 
 
-
+const btn = document.querySelector(".calculate");
 const userItem = document.getElementById("item");
 let itemValue = document.getElementById("price");
 let length = document.getElementById("length");
@@ -14,13 +14,24 @@ function Go(){
     var result = price / instalments;
     
     // append to the 
-    document.getElementById("results-part1").innerHTML = " The " + userItem.value +  " is going to cost you " +  Math.round(result) + " Monthly "    
+    document.querySelector(".results-part-1").innerHTML = " The " + userItem.value +  " is going to cost you " +  Math.round(result) + " Monthly "    
     
-    // prevent from loading the page
-    event.preventDefault();
 
-   
+
+btn.addEventListener('click', () => {
+  // 👇️ hide button
+  btn.style.display = 'none';
+
+  // 👇️ show div
+  const box = document.querySelector('.results-part-1');
+  box.style.display = 'block';
+});
+
+event.preventDefault(); 
 };
+
+
+
 
 
     

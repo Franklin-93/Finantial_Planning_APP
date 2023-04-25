@@ -94,20 +94,3 @@
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
- /*==============================*/
-
-#result{
-    animation:result 5s; 
-    background-color: beige;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 10px;
-    border-radius: 15px;
-}
-
-
-@keyframes result{
-    0%{opacity:0;}  
-    80%{opacity:0;}
-    100%{opacity:1;}
-    }
-   
