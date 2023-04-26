@@ -10,9 +10,10 @@
 </head>
 
     <body>
-        <div class = "box">
+
+        <div class = "box_1">
             <h2>Calculator</h2>
-        <form class="form-inline-1">
+        <form name="myForm" class="form-inline-1" >
             <div>
                  <input type="text" id="item" required="This is required.">
                  <label>What would you like to buy ?</label>
@@ -22,24 +23,22 @@
                 <label>How much is the Item ?</label>
             </div>
            <div>
-            <input type="number" id="length" required="This is required.">
+            <input name="lenght" id="length" required="This is required.">
             <label>Number of months to be paying it:</label>
          </div>
-    
-        <div>
-                <button onclick="Go()" class ="calculate" type="text">GO</button>
+         <div class="button_next">
+                <button  class ="button" type="button">Next</button>
         </div> 
         </form>
     </div>
         
-        
-        <div class="results">
+    <div class="results">
              <p class="results-part-1"></p>
         </div>
-
+    
     
         <!--It will direct to home page-->
-        <a href="../renderer/index.html">START OVER</a>
+        <a href="../renderer/index.html">start over</a>
     
         <br>
         <br>

@@ -7,7 +7,7 @@ body{
     overflow: hidden;
 }
 
-.box{
+.box_1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,14 +22,13 @@ body{
 
 }
 
-.box h2{
+.box_1 h2{
     margin: 0 0 40px;
     padding: 0;
     color:  #414141;
-    text-transform: uppercase;
-}
+    text-transform: uppercase;}
 
-.box input{
+.box_1 input{
     padding: 10px 0;
     margin-bottom: 30px;
 }
@@ -40,7 +39,7 @@ body{
     margin-bottom: 40px;
 }*/
 
-.box input{
+.box_1 input{
     width: 100%;
     box-sizing: border-box;
     box-shadow: none;
@@ -52,41 +51,39 @@ body{
 
 }
 
-/*STYLING */
-.box button{
+.button_next{
+   position: absolute;
+   margin-left: 85%;
+   margin-top: -15px;
+  
+}
+
+.button{
     border-bottom: none;
     cursor: pointer;
     background-color: #414141;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
-    margin-bottom: 0;
+    border-radius: 4px;
     text-transform: uppercase;
-    width: 100%;
-    padding: 10px;
+    padding: 4px;
 }
-.calculate:hover{
+
+.button:hover{
+  color: #ffffff;
   cursor: pointer;
   transition: 0.5s;
-  right: -20px;
-  transition: 1s;  
-  padding-right: 60px;
+  transition: 0.5s;  
+  padding-right: 15px;
   background-color: rgb(0, 0, 0);
   font-style: italic;
-  
 }
 
-
-
-
-
-
-
-.box form div{
+.box_1 form div{
     position: relative;
 }
 
-.box form div label{
+.box_1 form div label{
   position:absolute;  
   left:0px;
   /*padding-top: px;*/
@@ -95,51 +92,45 @@ body{
   transition: .5s;
 }
 
-.box input:focus ~ label,
-.box input:valid ~ label{
+.box_1 input:focus ~ label,
+.box_1 input:valid ~ label{
   top: -20px;  
   color:  #414141;
   font-size: 12px;
   font-weight: bold;
 }
 
-.box input:focus,
-.box input:valid{
+.box_1 input:focus,
+.box_1 input:valid{
   border-bottom: 2px solid #4e4f50;;
 }
-
-
-
-
-/**/
-
-
-
 
 @keyframes results-part1{
     0%{opacity:0;}  
     80%{opacity:0;}
     100%{opacity:1;}
     }
-.results {
+
+    
+/*.results {
 
     position: absolute;
     margin-top: 530px; 
     width: 550px;
     margin-left: 395px;
     
-}
+}*/
 
 .results-part-1 {
     text-align: center;
     animation:result 2.5s;
-    padding: 35px; 
+    padding: 15px; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 5px;
     color: #ffffff;
 
     /*set background color and right after display:none. It will has the effects I wanted */  
     background-color: rgb(77, 77, 77);
-    /*display: none;*/
+    display: none;
 }
     
