@@ -1,4 +1,8 @@
 
+// we use require when usiing node.js
+// assign them to const and then go about just calling them
+const myFunctions = require("./functions");
+
 // Getting Values
 const box_1 = document.querySelector(".box_1");
 const button = document.querySelector(".button");
@@ -15,7 +19,6 @@ let length = document.getElementById("length");
 
 // onclick function when button 'next' is clicked
   button.addEventListener("click", function (event) {
-
     let price = parseInt(itemValue.value); // get prince
     let instalments = parseInt(length.value); // get number of months
     let result = price / instalments; // find the monthly value
