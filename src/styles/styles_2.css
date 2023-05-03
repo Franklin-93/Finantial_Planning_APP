@@ -26,20 +26,12 @@ body{
     margin: 0 0 40px;
     padding: 0;
     color:  #414141;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+  }
 
 .box_1 input{
     padding: 10px 0;
     margin-bottom: 30px;
-}
-
-/*.box textarea{
-    height: 80px;
-    padding:10px 0;
-    margin-bottom: 40px;
-}*/
-
-.box_1 input{
     width: 100%;
     box-sizing: border-box;
     box-shadow: none;
@@ -107,12 +99,16 @@ body{
 
     
 
-.results{
+.output-container{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
     /*aligning div*/
-    width: 400px;
-    height: 100px;
+    width: 600px;
+    height: 50px;
     margin: auto;
-    
     
     /*set animation*/
     animation:fadeInTop 2.5s;
@@ -120,15 +116,141 @@ body{
     /*display none attribute here so I can load the output in my (JavaScript)*/
     display: none;
 }
-.results p{
-    margin-top: 35px;
-    text-align: left;
-    color: rgb(243, 240, 240);
-    padding-left: 15px;
-    border-left: 2px solid rgb(3, 255, 234);
-}
 @keyframes fadeInTop {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
 
+.output-container .results-part-1{
+    position:absolute;
+    pointer-events: none;
+    margin-top: 35px;
+    text-align: left;
+    margin-left: 150px;
+    color: rgb(243, 240, 240);
+    padding-left: 25px;
+    border-left: 2px solid rgb(3, 255, 234);
+}
+
+.output-container .results-part-2{
+  text-align: justify;
+  position:absolute;
+  pointer-events: none;
+  margin-top: 35px;
+  text-align: left;
+  color: rgb(243, 240, 240);
+  padding-left: 25px;
+  border-left: 2px solid rgb(3, 255, 234);
+  animation:fadeInTop 2.5s;
+    
+  /*display none attribute here so I can load the output in my (JavaScript)*/
+  display: none;
+}
+
+
+
+/*Styling 'DIV' created in JS*/
+#myDiv {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgb(114, 121, 121);
+    border-radius: 10px;
+    background-color: #ebebeb;
+
+
+     /*set animation*/
+     animation:fadeInTop 2.5s;
+    
+     /*display none attribute here so I can load the output in my (JavaScript)*/
+     
+}
+
+@keyframes fadeInTop {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+#myDiv input{
+padding: 10px 0;
+margin-bottom: 30px;
+width: 100%;
+box-sizing: border-box;
+box-shadow: none;
+outline: none;
+border: none;
+border-bottom: 2px solid  #414141;
+background-color:  #eceaea;
+}
+
+#myDiv p{
+    position:absolute;
+    bottom: 70%;
+    pointer-events: none;
+    color: #414141;
+    
+  }
+
+/*button*/
+ #button_2{
+     border-bottom: none;
+     cursor: pointer;
+     background-color: #414141;
+     color: #ffffff;
+     border: none;
+     border-radius: 4px;
+     text-transform: uppercase;
+     padding: 4px;
+ }
+ 
+ #button_2:hover{
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-right: 15px;
+  background-color: rgb(0, 0, 0);
+  font-style: italic;
+ }
+
+
+ /*hides PDF generator / start over page*/
+ .pdf-start{
+  position: absolute;
+  top: 70%;
+  right: 15px;
+  display: none;
+  padding: 10px;
+  width: 125px;
+  animation:fadeInTop 6s;
+ }
+
+ .pdf-start a{
+  text-transform: uppercase;
+  margin: 15px;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+ 
+}
+
+ .pdf-start a:hover{
+  width: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-left: 20px;
+  background-color:aqua;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+ }

@@ -12,7 +12,7 @@ let mainWindow;
 function createMainWindow() {
     mainWindow = new BrowserWindow({// Create the browser window
       title: "Finantial Planning",
-        width: isDeveloper ? 1000: 600, // if in dev mode will open widht with 1000px
+        width: isDeveloper ? 1000: 6000, // if in dev mode will open widht with 1000px
         height : 600,
 
         // it will only diaplay the page when all is loaded to avoid falshes

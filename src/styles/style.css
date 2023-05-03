@@ -1,10 +1,4 @@
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
   
   body {
     background-color: #000000;
@@ -12,12 +6,15 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
   }
-  .waviy {
+
+  .waver-container {
     position: absolute;
     margin-bottom:30%;
   }
-  .waviy span {
+
+  .waver-container span {
     position: relative;
     font-weight: 600;
     display: inline-block;
@@ -27,72 +24,67 @@
     animation: flip 2s infinite;
     animation-delay: calc(.2s * var(--i))
   }
+
   @keyframes flip {
     0%,80% {
       transform: rotateY(360deg) 
     }
   }
 
-/* INTRO */
 
- 
+  /*INTRO CONTAINER*/
+ .intro-container p{
+  color: aliceblue;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 15px;
+  text-align: justify;
+  border-left: 0.5px solid rgb(206, 205, 205);
+  padding: 40px;
+  margin-left: 35px;
+  animation: fadeInLeft 5s;
+
+}
+
+@keyframes fadeInLeft {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+/*BUTTON START */
 .button-start{
     position: absolute;
-    padding: 10px 20px 10px 20px;
+    padding: 15px;
     margin-top: 400px;
-    background: #474747;
-    box-sizing: border-box;
-    box-shadow: 0 5px 10px #969797;
-    border-radius: 10px;
-    text-transform: uppercase;
-
     cursor: pointer;
-   
-    transition: 1s;
-    animation: fadeInLeft 3s;
-  }
- 
-  @keyframes fadeInLeft {
-   0% { opacity: 0; }
-   100% { opacity: 1; }
- }
-
- a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     width: 100px;
-    text-align: center;
  }
 
- a:hover{
-    color: #000000;
-    background: #07ffea;
-    font-size:14px;
-    font-style: italic;    
-    padding-right: 40px;
-    font-size: small;
-   
-   
- }
-
- .intro p{
-    color: aliceblue;
-    font-family: sans-serif;
+ .button-start a{
+    box-sizing: border-box;
     text-transform: uppercase;
-    padding: 10px;
-    font-size: 15px;
-    text-align: justify;
-    border-left: 2px solid rgb(206, 205, 205);
-    padding: 40px;
-    margin-left: 35px;
-    animation: fadeInLeft 3s;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
  }
 
- @keyframes fadeInLeft {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+ .button-start a:hover{
+  width: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-left: 20px;
+  background-color:aqua;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+ }
+
 
 

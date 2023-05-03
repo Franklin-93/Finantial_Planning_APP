@@ -2,87 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles_2.css">
-    <title>CALCULATOR</title>
+    <title>Calculator</title>
 </head>
-
     <body>
-
         <div class = "box_1">
-            <h2>Calculator</h2>
-        <form name="myForm" class="form-inline-1" >
-            <div>
-                 <input type="text" id="item" >
-                 <label>What would you like to buy ?</label>
-            </div>
-            <div>
-                <input type="text" id="price">
-                <label>How much is the Item ?</label>
-            </div>
-           <div>
-            <input name="lenght" id="length">
-            <label>Number of months to be paying it:</label>
-         </div>
+        <h2>Calculator</h2>
+            <form class="form-inline-1" >           
+                <div>
+                    <input type="text" id="item"  required="This is required">
+                    <label>What would you like to buy ?</label>
+                </div>
+                <div>
+                    <input type="text" id="price" required="This is required">
+                    <label>How much is the Item ?</label>
+                </div>
+                <div>
+                    <input name="lenght" id="length" required="This is required">
+                    <label>Number of months to be paying it:</label>
+                </div>
+                <div class="button_next">
+                    <button class ="button" type="text">Next</button>
+                </div> 
+            </form>
+        </div>
+
+    <div class="output-container">
+        <p class="results-part-1"></p>
+        <p class="results-part-2"></p>
+    </div>
        
-         <div class="button_next">
-                <button class ="button" type="text">Next</button>
-        </div> 
-        </form>
+    <div class="pdf-start">
+        <a href="../renderer/index.html">start over</a>
+        <a href="">Generate PDF</a>
     </div>
         
-    <div class="results">
-             <p class="results-part-1"></p>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!--It will direct to home page-->
-        <a href="../renderer/index.html">start over</a>
-    
-        <br>
-        <br>
-        <a class ="calculate" href="">Generate PDF</a>
-
         <script  src="../app/renderer.js"></script>
 
-       
     </body>
 </html>
