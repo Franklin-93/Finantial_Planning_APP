@@ -168,7 +168,7 @@ body{
      animation:fadeInTop 2.5s;
     
      /*display none attribute here so I can load the output in my (JavaScript)*/
-     
+     display: none;
 }
 
 @keyframes fadeInTop {
@@ -189,15 +189,14 @@ border-bottom: 2px solid  #414141;
 background-color:  #eceaea;
 }
 
-#myDiv p{
+#myDiv label{
     position:absolute;
-    bottom: 70%;
+    bottom: 80%;
     pointer-events: none;
-    color: #414141;
-    
+    color: #414141;    
   }
 
-/*button*/
+
  #button_2{
      border-bottom: none;
      cursor: pointer;

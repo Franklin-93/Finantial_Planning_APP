@@ -59,6 +59,7 @@
     margin-top: 400px;
     cursor: pointer;
     width: 100px;
+   
  }
 
  .button-start a{
@@ -70,10 +71,11 @@
     display: block;
     text-decoration: none;
     color: white;
-    font-size: 10px;
+    font-size: 13px;
  }
 
  .button-start a:hover{
+  
   width: 100px;
   cursor: pointer;
   transition: 0.5s;

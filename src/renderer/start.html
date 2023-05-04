@@ -29,17 +29,28 @@
             </form>
         </div>
 
-    <div class="output-container">
-        <p class="results-part-1"></p>
-        <p class="results-part-2"></p>
-    </div>
-       
-    <div class="pdf-start">
-        <a href="../renderer/index.html">start over</a>
-        <a href="">Generate PDF</a>
-    </div>
+
+        <div id="myDiv">
+            <input id="input" required="This is required">
+            <label>How much can you pay Monthly?</label>
+            <button id="button_2">Calculate</button>
+        </div>
+
+        <div class="output-container">
+            <p class="results-part-1"></p>
+            <p class="results-part-2"></p>
+        </div>
+
+
         
-        <script  src="../app/renderer.js"></script>
+        <div class="pdf-start">
+            <a href="../renderer/index.html">start over</a>
+            <a href="">Generate PDF</a>
+        </div>
+        
+    <!-- This will throw an error cause it hasnt been required in the main
+    or even puttiing it to type:module in here-->
+        <script type="module" src="../app/renderer.js"></script>
 
     </body>
 </html>
