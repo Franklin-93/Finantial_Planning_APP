@@ -133,9 +133,7 @@
 
    // exportiing the functions to the main where we want to use it
    export { getMonthlyValue, getMonthsDueToPay, getDecimal,
-
     getInteger, getRemaningDays, getRemaningDaysRounded,
-
     getDifferenceLess, getDifferenceMore,
 };
   

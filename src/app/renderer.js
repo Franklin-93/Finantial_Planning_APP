@@ -2,56 +2,6 @@
 // we use require when usiing node.js
 // assign them to const and then go about just calling them
 import * as myCalculator from './functions.js'
-
-
-/*-------------------------------------------------------------
-Getting DECIMAL PART from months due to pay
---------------------------------------------------------------*/
-//let decimalPart = myCalculator.getDecimal(monthsDue);
-//console.log("EXTRACTING DECIMAL PART : " + decimalPart );
-
-/*-------------------------------------------------------------
-Getting INTEGER PART from months due to pay
---------------------------------------------------------------*/
-//let integer = myCalculator.getInteger(monthsDue);
-//console.log("INTEGER PART : " + integer);
-
-/*-------------------------------------------------------------
-Getting DAYS from decimal part of months due (rounded to UP)
---------------------------------------------------------------*/
-//let daysFromDecimal = myCalculator.getRemaningDaysRounded(decimalPart);
-//console.log("DAYS FROM DECIMAL PART : (make sure to round to 20) " + daysFromDecimal);
-
- /*-------------------------------------------------------------
-(IF user is PAYING MORE) that will leave them with LESS months to pay
-Finding DIFFERENCE between (length & MonthsDue) 
---------------------------------------------------------------*/
-//let difference = myCalculator.getDifferenceMore(29,monthsDue);       
-//console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference);
-
-/*-------------------------------------------------------------
-(IF user is PAYING LESS) that will leave them with MORE months to pay
-Finding DIFFERENCE between (length & MonthsDue) 
---------------------------------------------------------------*/
-//let difference_2 = myCalculator.getDifferenceMore(29,monthsDue);       
-//console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
-
-/*-------------------------------------------------------------
-Extracting DECIMAL PART from Difference
---------------------------------------------------------------*/
-//let getDecimalFromDifference = myCalculator.getDecimal(difference);
-//console.log("EXTRACTING DECIMAL PART from DIFFERENCE - LESS : " + getDecimalFromDifference );
-
-//let getDecimalFromDifference_2 = myCalculator.getDecimal(difference_2);
-//console.log("EXTRACTING DECIMAL PART from DIFFERENCE - MORE : " + getDecimalFromDifference_2 );
-
-/*-------------------------------------------------------------
-Getting days from (Integer Difference) to use if USER IS PAYING More
---------------------------------------------------------------*/
-//let daysFromDifferenceMonths = myCalculator.getRemaningDays(getDecimalFromDifference);
-//console.log("DAYS FROM DECIMAL PART ( difference ) - LESS : " + daysFromDifferenceMonths);
-
-
   
 // Getting Values from DOM
 const box_1 = document.querySelector(".box_1");
@@ -61,6 +11,7 @@ const result_part_1 = document.querySelector(".results-part-1");
 const results = document.querySelector(".output-container");
 const myForm = document.querySelector(".form-inline-1");
 const PDFStart = document.querySelector(".pdf-start");
+
 let itemValue = document.getElementById("price");
 let length = document.getElementById("length");
 let div = document.getElementById("myDiv");
@@ -68,18 +19,24 @@ let result_part_2 = document.querySelector(".results-part-2");
 let button_2 = document.getElementById("button_2");
 let userInput = document.getElementById("input");
 
+// function inside getMonthlyValue so I can call when validate
+// cause it was giving me an error of undifined
+function getValue(){
+  let monthlyValue = myCalculator.getMonthlyValue(itemValue.value,length.value);
+  return monthlyValue;
+}
 
 
 // onclick call get first breakdown input when button 'next' is clicked
 button.addEventListener("click", function(event) {
       
-       // 1) CALL getMonthlyValue - Finding (months due to pay) 
-       let monthlyValue = myCalculator.getMonthlyValue(itemValue.value,length.value); 
-        // monthly output
+  let monthlyValue = getValue();
+  
+  // monthly output
         let text = " The " + userItem.value +  " is going to cost you " + monthlyValue + " Monthly ";
 
         // appends the monthly value to the DOM
-        result_part_1.innerHTML = text;  
+        result_part_1.textContent = text;  
 
         // hide form when button next is clicked
         box_1.style.display = 'none';
@@ -94,10 +51,15 @@ button.addEventListener("click", function(event) {
         event.preventDefault();
 
         // assigning the 'myForm' class to reset method so the form can be cleared once the button is clicked
-       // myForm.reset();
+       
+        // myForm.reset();
+       /* note do not use the 'reset' method because it wont be possible to get
+       values for manipulation as it will refresh if you use and the values that
+       was acquired by 'value' will be lost */
+       
     });
 
-
+const that = userItem.value;
 
 
   // shows DIV
@@ -110,22 +72,164 @@ button.addEventListener("click", function(event) {
   };
     
 
-    
-
 
     
   // onclick function when button 'next' is clicked
   button_2.addEventListener("click", function (event) {
 
-     /*-------------------------------------------------------------
+    let monthlyValue = getValue();
+
+    /*-------------------------------------------------------------
     Finding (months due to pay) 
     --------------------------------------------------------------*/
     let monthsDue = myCalculator.getMonthsDueToPay(itemValue.value,length.value,userInput.value);
+    console.log("MONTHS TO PAY : " + monthsDue);
+    /*-------------------------------------------------------------
+    Getting DECIMAL PART from months due to pay
+  --------------------------------------------------------------*/
+    let decimalPart = myCalculator.getDecimal(monthsDue);
+    console.log("EXTRACTING DECIMAL PART : " + decimalPart );
 
-    let text2 = "just (TESTING) MONTHS TO PAY " + monthsDue;
+  /*-------------------------------------------------------------
+    Getting INTEGER PART from months due to pay
+  --------------------------------------------------------------*/
+  let integer = myCalculator.getInteger(monthsDue);
+  console.log("INTEGER PART : " + integer);
 
-    // appends the monthly value to the DOM
-    result_part_2.innerHTML = text2;  
+  /*-------------------------------------------------------------
+  Getting DAYS from decimal part of months due (rounded to UP)
+--------------------------------------------------------------*/
+  let daysFromDecimal = myCalculator.getRemaningDaysRounded(decimalPart);
+  console.log("DAYS FROM DECIMAL PART :" + daysFromDecimal);
+
+  /*-------------------------------------------------------------
+  (IF user is PAYING MORE) that will leave them with LESS months to pay
+  Finding DIFFERENCE between (length & MonthsDue) 
+--------------------------------------------------------------*/
+let difference = myCalculator.getDifferenceLess(length.value,monthsDue);       
+console.log("DIFFERENCE BETWEEN (length & months Due - LESS : " + difference);
+
+ /*-------------------------------------------------------------
+  (IF user is PAYING LESS) that will leave them with MORE months to pay
+  Finding DIFFERENCE between (length & MonthsDue) 
+--------------------------------------------------------------*/
+let difference_2 = myCalculator.getDifferenceMore(length.value,monthsDue);       
+console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
+        
+  /*-------------------------------------------------------------
+  Extracting DECIMAL PART from Difference
+  --------------------------------------------------------------*/
+  let getDecimalFromDifference = myCalculator.getDecimal(difference);
+  console.log("EXTRACTING DECIMAL PART from DIFFERENCE - LESS : " + getDecimalFromDifference );
+
+  let getDecimalFromDifference_2 = myCalculator.getDecimal(difference_2);
+  console.log("EXTRACTING DECIMAL PART from DIFFERENCE - MORE : " + getDecimalFromDifference_2 );
+        
+  
+  /*-------------------------------------------------------------
+    Extracting (INTEGER) PART from (Integer Difference)
+  --------------------------------------------------------------*/
+  let integerFromDifference = myCalculator.getInteger(difference);
+  console.log("INTEGER FROM DIFFERENCE - LESS:" + integerFromDifference);
+
+
+ 
+  let integerFromDifference_2 = myCalculator.getInteger(difference_2);
+  console.log("INTEGER FROM DIFFERENCE  - MORE:" + integerFromDifference_2);
+
+   /*-------------------------------------------------------------
+    Getting days from (Integer Difference) to use if USER IS PAYING More
+  --------------------------------------------------------------*/
+  let daysFromDifferenceMonths = myCalculator.getRemaningDays(getDecimalFromDifference);
+  console.log("DAYS FROM DECIMAL PART ( difference ) - LESS : " + daysFromDifferenceMonths);
+     
+
+
+
+
+
+
+        
+    // OUTPPUT out of scope to be validate and store the correct output everytime it tuns 
+    let text2 = ""; 
+   
+  
+
+    
+        //IF USER PAY MORE THAN (Monthly Value) then it will take less days & months to pay
+        if (userInput.value > monthlyValue){ 
+          /*-------------------------------------------------------------------
+           if integer from difference is NULL. (DAYS ONLY) to be displayed cause 
+           the months fur to pay is less than length && not greater than length (ONLY DECIMAL) differences
+          ---------------------------------------------------------------------*/
+   if ((integerFromDifference ==0)){
+            
+    text2 = " Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +  
+                   "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
+           }
+        
+        
+         /*-------------------------------------------------------------------
+           if days from decimal part is NULL (MONTHS ONLY) to be displayed
+          ---------------------------------------------------------------------*/
+   else if (daysFromDecimal ==0){
+             
+    text2 = "Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + integerFromDifference + " months less to pay for the (" + userItem.value + ")" + "\n" +   
+                   "Leaving you with " + integer + " months total.";
+           }
+        
+         
+         /*-------------------------------------------------------------------
+           if days from decimal part is greater than 1 (MONTHS & DAYS) to be displayed
+          ---------------------------------------------------------------------*/
+    else if (daysFromDecimal >1){
+            
+      text2 = "Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + integerFromDifference + " months & " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +    
+                   "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
+       }
+}
+
+//IF USER PAY LESS THAN (Monthly Value) then it will take more days & months to pay
+else if (userInput.value < monthlyValue){ 
+          /*-------------------------------------------------------------------
+           if integer from difference is NULL. (DAYS ONLY) to be displayed cause 
+           the months fur to pay is less than length && not greater than length (ONLY DECIMAL) differences
+          ---------------------------------------------------------------------*/
+       if ((integerFromDifference == 0)){
+             
+        text2 = "Because you can pay " + userInput.value + ", less than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +   
+                   "Leaving you with " + integer + " months and " + daysFromDecimal + " days total.";
+           }
+        
+        
+         /*-------------------------------------------------------------------
+           if days from decimal part is NULL (MONTHS ONLY) to be displayed
+          ---------------------------------------------------------------------*/
+       else if (daysFromDecimal == 0){
+       
+        text2 = "Because you can pay " + userInput.value + ", less than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + integerFromDifference_2 + " months more to pay for the (" + userItem.value + ")" + "\n" +    
+                   "Leaving you with " + integer + " months total.";
+           }
+        
+         
+         /*-------------------------------------------------------------------
+           if days from decimal part is greater than 1 (MONTHS & DAYS) to be displayed
+          ---------------------------------------------------------------------*/
+       else if (daysFromDecimal >1){
+             
+        text2 = "Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days less to pay for the (" + userItem.value + ")" + "\n" +  
+                   "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
+           }
+   } 
+
+    // appends the final breakdown message to the DOM
+    result_part_2.textContent = text2;  
 
     //-------------------------------------------
     // hide form when button next is clicked

@@ -145,6 +145,7 @@ body{
     
   /*display none attribute here so I can load the output in my (JavaScript)*/
   display: none;
+  line-height: 2em;
 }
 
 
