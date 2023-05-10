@@ -1,6 +1,27 @@
  // GLOBAL static variable that holds the days of the month
  const DAYS_OF_THE_MONTH = 30;
    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
  /**
   * Finding MONTHLY value
   * Item value = 3600 (total)
@@ -11,7 +32,6 @@
   * @param length months the user chooses to pay
   * @return monthly value 
   */
- 
  function getMonthlyValue(itemValue, length) {
 
     let value = parseInt(itemValue); 
@@ -19,6 +39,7 @@
     let monthlyValue = value/instalments;
         return Math.round(monthlyValue); 
  };
+
 
  /**
   * Rule of Three (DIRECT) to find total months either for less or more
@@ -88,11 +109,10 @@
   * Will use the decimal part multiplied by total days of the month = (30 * 0.6 = 19.5 days total)
   * @param decimal taken from the getDecimal (method) in the parameter
   * @return the remaining days from the decimal part
-  * The Math.ceil() static method always rounds up and returns the smaller integer greater than or equal to a given number
   */
  function getRemaningDays(decimal) {
      let daysFromDecimalPart = DAYS_OF_THE_MONTH * decimal;
-     return  Math.ceil(daysFromDecimalPart);
+     return  Math.trunc(daysFromDecimalPart);
      
  };
 
@@ -103,6 +123,8 @@
   * ==============================================================
   * @param decimal
   * @return ROUNDED 
+  * The Math.ceil() static method always rounds up and returns the smaller integer greater than or equal to a given number
+  * 
   */
  function getRemaningDaysRounded(decimal) {
      let daysFromInteger = DAYS_OF_THE_MONTH * decimal;

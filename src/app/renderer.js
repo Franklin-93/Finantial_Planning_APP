@@ -18,6 +18,7 @@ let div = document.getElementById("myDiv");
 let result_part_2 = document.querySelector(".results-part-2");
 let button_2 = document.getElementById("button_2");
 let userInput = document.getElementById("input");
+let pdf = document.getElementById("bt2");
 
 // function inside getMonthlyValue so I can call when validate
 // cause it was giving me an error of undifined
@@ -25,6 +26,7 @@ function getValue(){
   let monthlyValue = myCalculator.getMonthlyValue(itemValue.value,length.value);
   return monthlyValue;
 }
+
 
 
 // onclick call get first breakdown input when button 'next' is clicked
@@ -59,8 +61,6 @@ button.addEventListener("click", function(event) {
        
     });
 
-const that = userItem.value;
-
 
   // shows DIV
   function showDIV(){
@@ -68,10 +68,11 @@ const that = userItem.value;
       // it was set to display 'none' in CSS
       //here when button is clicked call function inside first event listener
       div.style.display = 'block';
-    }, 4000); 
+    }, 2000); 
   };
     
-
+ // OUTPPUT out of scope to be validate and store the correct output everytime it tuns 
+ let text2 = ""; 
 
     
   // onclick function when button 'next' is clicked
@@ -143,18 +144,9 @@ console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
   let daysFromDifferenceMonths = myCalculator.getRemaningDays(getDecimalFromDifference);
   console.log("DAYS FROM DECIMAL PART ( difference ) - LESS : " + daysFromDifferenceMonths);
      
-
-
-
-
-
-
         
-    // OUTPPUT out of scope to be validate and store the correct output everytime it tuns 
-    let text2 = ""; 
    
-  
-
+   
     
         //IF USER PAY MORE THAN (Monthly Value) then it will take less days & months to pay
         if (userInput.value > monthlyValue){ 
@@ -222,8 +214,8 @@ else if (userInput.value < monthlyValue){
           ---------------------------------------------------------------------*/
        else if (daysFromDecimal >1){
              
-        text2 = "Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days less to pay for the (" + userItem.value + ")" + "\n" +  
+        text2 = "Because you can pay " + userInput.value + ", less than the monthly value (" + Math.round(monthlyValue)+ ")"+
+                   " you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +  
                    "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
            }
    } 
@@ -249,8 +241,19 @@ else if (userInput.value < monthlyValue){
     event.preventDefault();
 })
 
+pdf.addEventListener("click",genPDF)
+window.jsPDF = window.jspdf.jsPDF;// add this line of code
 
-
+function genPDF() {
+	
+	var doc = new jsPDF();
+	
+	doc.text(10,10,text2);
+	doc.addPage();
+	doc.text(20,20,'TEST Page 2!');
+	doc.save('Test.pdf');
+	
+}
 
 
 
