@@ -96,9 +96,6 @@ body{
   border-bottom: 2px solid #4e4f50;;
 }
 
-
-    
-
 .output-container{
     position: absolute;
     top: 25%;
@@ -253,4 +250,9 @@ background-color:  #eceaea;
   color: black;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgb(255, 255, 255);
+ }
+
+ .final_breakdown{
+
+  background-color: #4e4f50;
  }

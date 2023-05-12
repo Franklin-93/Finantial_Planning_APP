@@ -4,11 +4,33 @@
   "description": "Finantial Planning Helper",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder", 
+    "dist": "npm run build && electron-builder --publish never"
   },
+
+  
   "author": "FRANKLIN",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^24.1.2"
+    "electron": "^24.1.2",
+    "electron-builder": "^23.6.0",
+    "electron-installer-dmg": "^4.0.0",
+    "electron-installer-windows": "^3.0.0",
+    "electron-packager": "^17.1.1"
+  },
+  "build": {
+    "productName": "HELPER",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "build/icon.png"
+    }
   }
 }

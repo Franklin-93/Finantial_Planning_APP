@@ -1,3 +1,5 @@
+
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +9,14 @@
     <link rel="stylesheet" href="../styles/styles_2.css">
     <title>Calculator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    
 
 </head>
     <body>
+        <div class="container">
+
+        
+    
         <div class = "box_1">
         <h2>Calculator</h2>
             <form class="form-inline-1" >           
@@ -38,6 +45,7 @@
             <button id="button_2">Calculate</button>
         </div>
 
+        
         <div class="output-container">
             <p class="results-part-1"></p>
             <p class="results-part-2"></p>
@@ -47,18 +55,18 @@
         
         <div class="pdf-start">
             <a href="../renderer/index.html">start over</a>
-            <a id="bt2" href="javascript:genPDF()">Download PDF</a>
+            <a id="download-button">Download PDF</a> 
+            <!--<a id="bt2" href="javascript:genPDF()">Download PDF</a>-->
+           
         </div>
 
-       
         
-    <!-- This will throw an error cause it hasnt been required in the main
+     <!--This will throw an error cause it hasnt been required in the main
     or even puttiing it to type:module in here-->
         <script type="module" src="../app/renderer.js"></script>
 
-    </body>
-
+    </body> 
     
-
-  
-</html>
+    </html>
+   
+ 

@@ -18,7 +18,7 @@
     position: relative;
     font-weight: 600;
     display: inline-block;
-    font-size: 70px;
+    font-size: 60px;
     color: #fff;
     text-transform: uppercase;
     animation: flip 2s infinite;
@@ -38,7 +38,7 @@
   font-family: sans-serif;
   text-transform: uppercase;
   padding: 10px;
-  font-size: 15px;
+  font-size: 13px;
   text-align: justify;
   border-left: 0.5px solid rgb(206, 205, 205);
   padding: 40px;
@@ -52,10 +52,6 @@
 100% { opacity: 1; }
 }
 
-.java-simulation{
- width: 50px;
- height: 60px;
-}
 
 /*BUTTON START */
 .button-start{

@@ -1,6 +1,7 @@
 
 // we use require when usiing node.js
 // assign them to const and then go about just calling them
+
 import * as myCalculator from './functions.js'
   
 // Getting Values from DOM
@@ -18,8 +19,8 @@ let div = document.getElementById("myDiv");
 let result_part_2 = document.querySelector(".results-part-2");
 let button_2 = document.getElementById("button_2");
 let userInput = document.getElementById("input");
-let pdf = document.getElementById("bt2");
-
+const genPDF = document.getElementById("download-button");
+const container = document.getElementById("container");
 // function inside getMonthlyValue so I can call when validate
 // cause it was giving me an error of undifined
 function getValue(){
@@ -134,7 +135,6 @@ console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
   console.log("INTEGER FROM DIFFERENCE - LESS:" + integerFromDifference);
 
 
- 
   let integerFromDifference_2 = myCalculator.getInteger(difference_2);
   console.log("INTEGER FROM DIFFERENCE  - MORE:" + integerFromDifference_2);
 
@@ -145,9 +145,6 @@ console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
   console.log("DAYS FROM DECIMAL PART ( difference ) - LESS : " + daysFromDifferenceMonths);
      
         
-   
-   
-    
         //IF USER PAY MORE THAN (Monthly Value) then it will take less days & months to pay
         if (userInput.value > monthlyValue){ 
           /*-------------------------------------------------------------------
@@ -156,8 +153,9 @@ console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
           ---------------------------------------------------------------------*/
    if ((integerFromDifference ==0)){
             
-    text2 = " Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +  
+    text2 = "HERE IS YOUR BREADOWN |\n"+
+    "Because you can pay \u20AC " + userInput.value + ", more than the monthly value \u20AC " + Math.round(monthlyValue)+ ")\n"+
+                   "you will take " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +  
                    "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
            }
         
@@ -167,8 +165,9 @@ console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
           ---------------------------------------------------------------------*/
    else if (daysFromDecimal ==0){
              
-    text2 = "Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + integerFromDifference + " months less to pay for the (" + userItem.value + ")" + "\n" +   
+    text2 = "HERE IS YOUR BREADOWN | \n"+
+    "Because you can pay \u20AC " + userInput.value + ", more than the monthly value \u20AC " + Math.round(monthlyValue)+ ")\n"+
+                   "you will take " + integerFromDifference + " months less to pay for the (" + userItem.value + ")" + "\n" +   
                    "Leaving you with " + integer + " months total.";
            }
         
@@ -178,8 +177,9 @@ console.log("DIFFERENCE BETWEEN (length & months Due - MORE : " + difference_2);
           ---------------------------------------------------------------------*/
     else if (daysFromDecimal >1){
             
-      text2 = "Because you can pay " + userInput.value + ", more than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + integerFromDifference + " months & " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +    
+      text2 = "HERE IS YOUR BREADOWN |\n"+ 
+      "Because you can pay \u20AC " + userInput.value + ", more than the monthly value \u20AC " + Math.round(monthlyValue)+ "\n"+
+                   "you will take " + integerFromDifference + " months & " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +    
                    "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
        }
 }
@@ -192,8 +192,9 @@ else if (userInput.value < monthlyValue){
           ---------------------------------------------------------------------*/
        if ((integerFromDifference == 0)){
              
-        text2 = "Because you can pay " + userInput.value + ", less than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +   
+        text2 = "HERE IS YOUR BREADOWN |\n"+
+        "Because you can pay \u20AC " + userInput.value + ", less than the monthly value \u20AC " + Math.round(monthlyValue)+ "\n"+
+                   "you will take " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +   
                    "Leaving you with " + integer + " months and " + daysFromDecimal + " days total.";
            }
         
@@ -203,8 +204,9 @@ else if (userInput.value < monthlyValue){
           ---------------------------------------------------------------------*/
        else if (daysFromDecimal == 0){
        
-        text2 = "Because you can pay " + userInput.value + ", less than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + integerFromDifference_2 + " months more to pay for the (" + userItem.value + ")" + "\n" +    
+        text2 = "HERE IS YOUR BREADOWN |\n"+
+        "Because you can pay \u20AC " + userInput.value + ", less than the monthly value \u20AC " + Math.round(monthlyValue)+ "\n"+
+                   "you will take " + integerFromDifference_2 + " months more to pay for the (" + userItem.value + ")" + "\n" +    
                    "Leaving you with " + integer + " months total.";
            }
         
@@ -214,8 +216,9 @@ else if (userInput.value < monthlyValue){
           ---------------------------------------------------------------------*/
        else if (daysFromDecimal >1){
              
-        text2 = "Because you can pay " + userInput.value + ", less than the monthly value (" + Math.round(monthlyValue)+ ")"+
-                   " you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +  
+        text2 = "HERE IS YOUR BREADOWN | \n"+
+        "Because you can pay \u20AC " + userInput.value + ", less than the monthly value \u20AC " + Math.round(monthlyValue)+ "\n"+
+                   "you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +  
                    "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
            }
    } 
@@ -223,7 +226,6 @@ else if (userInput.value < monthlyValue){
     // appends the final breakdown message to the DOM
     result_part_2.textContent = text2;  
 
-    //-------------------------------------------
     // hide form when button next is clicked
     div.style.display = 'none';
       
@@ -235,28 +237,37 @@ else if (userInput.value < monthlyValue){
 
     // shows the PDF generator and start page again
     PDFStart.style.display = 'block';
-    //-------------------------------------------
 
     // define the 'event' in the function parameter and call prevent default to avoid loading the page
     event.preventDefault();
-})
+});
 
-pdf.addEventListener("click",genPDF)
-window.jsPDF = window.jspdf.jsPDF;// add this line of code
 
-function genPDF() {
+
+//Generates a pdf for the final breakdown
+
+genPDF.addEventListener("click", function (event) {
+  window.jsPDF = window.jspdf.jsPDF; // without this line of code wont run. add this line of code
 	
-	var doc = new jsPDF();
-	
+  let doc = new jsPDF();
 	doc.text(10,10,text2);
-	doc.addPage();
-	doc.text(20,20,'TEST Page 2!');
-	doc.save('Test.pdf');
-	
+	doc.save('@HELPER.Results.pdf');
+  event.preventDefault();
+});
+
+
+
+
+
+/*function generatePDF() {
+  // Choose the element that your content will be rendered to.
+  const element = document.querySelector(".results-part-2");
+  // Choose the element and save the PDF for your user.
+  html2pdf().from(element).save();
 }
 
-
-
+genPDF.addEventListener("click", generatePDF);
+*/
 
 
 

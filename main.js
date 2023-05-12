@@ -10,10 +10,13 @@ const isDeveloper = process.env.NODE_ENV != "PRODCUTION";
 let mainWindow;
 
 function createMainWindow() {
-    mainWindow = new BrowserWindow({// Create the browser window
+    mainWindow = new BrowserWindow({
+      // Create the browser window
       title: "Finantial Planning",
-        width: isDeveloper ? 1000: 6000, // if in dev mode will open widht with 1000px
-        height : 600,
+      width: 750, height: 550,
+       // width: isDeveloper ? 1000: 6000, // if in dev mode will open widht with 1000px
+        ///height : 600,
+        autoHideMenuBar: true, // it will hide the default menu
 
         // it will only diaplay the page when all is loaded to avoid falshes
         show: false, 
@@ -26,10 +29,7 @@ function createMainWindow() {
         },
     })
 
-    //OPEN dev tool if in dev environment 
-    if (isDeveloper){
-        mainWindow.webContents.openDevTools();
-    }
+  
 
 // mainWindow.loadURL("https://www.electronjs.org/docs/latest/api/browser-view");loading a URL for testing purposes
 mainWindow.loadFile(path.join(__dirname, '/src/renderer/index.html')); // file path where my folder is located
