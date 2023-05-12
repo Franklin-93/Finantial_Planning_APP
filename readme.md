@@ -13,10 +13,8 @@ It helps people who wants to buy a anything and would have the option of paying 
 
 ## Demo Video
 * Click Play to watch
-<div style="display: flex; justify-content: center">
-        <video width="650" height="450" controls>
-        <source src="/assets/videos/APP_SIMULATION.mp4" autoplay></video>
-</div>
+https://github.com/Franklin-93/Finantial_Planning_APP/assets/102427836/33c4ca50-d102-4c1e-8e7d-ad7612aff332
+
 
 ## Usage
 
