@@ -12,7 +12,8 @@ It helps people who wants to buy a anything and would have the option of paying 
 </div>
 
 ## Demo Video
-* Click Play to watch
+
+
 https://github.com/Franklin-93/Finantial_Planning_APP/assets/102427836/33c4ca50-d102-4c1e-8e7d-ad7612aff332
 
 
