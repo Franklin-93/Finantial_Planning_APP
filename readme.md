@@ -2,8 +2,10 @@
 
 It helps people who wants to buy a anything and would have the option of paying in installments selected by them, that could be either for more or less. On the top of that there is a functionality that asks them HOW MUCH they could pay for it.
 
+
 * It generate a PDF file displaying the (Final Breakdown).
 * Restar button to Reload the App.
+
 
 <div style="display: flex; justify-content: center">
     <img src="/images/COVER-3.png" width="400" />
