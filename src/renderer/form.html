@@ -1,0 +1,82 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style-form.css">
+    <link rel="stylesheet" href="../styles/style-output.css">
+    <title>Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+     
+</head>
+    <body>     
+
+        <!--FORM BOX -->
+        <div class = "form-box">
+        <h2>Calculator</h2>
+            <form class="form-inline-1" >           
+                <div>
+                    <input type="text" id="item"  required="This is required">
+                    <label>What would you like to buy ?</label>
+                </div>
+                <div>
+                    <input type="text" id="price" required="This is required">
+                    <label>How much is the Item ?</label>
+                </div>
+                <div>
+                    <input name="lenght" id="length" required="This is required">
+                    <label>Number of months to be paying it:</label>
+                </div>
+                
+                <div class="button_next">
+                    <button class="button">next</button>
+                    <!--<a href="../renderer/output.html" class="button">NEXT</a>-->
+                </div> 
+            </form>
+        </div>
+
+
+        <!--OUTPUT -->
+        <div class="output-container">
+            <p class="results-part-1"></p>
+            <p class="results-part-2"></p>
+        </div>
+        
+        <div class="form-box-2">
+            <div class="output">
+                <label>How much can you pay Monthly?</label>
+                <input id="final-input" type="text" placeholder="enter a value" required="This is required">
+                <button id="button-calculator">Calculate</button>
+            </div>
+        </div>
+    
+        <div class="quote-message-coontainer">
+            <div class="quote-message">
+                <p>Quote this ID if you want to retrieve this message again!</p>
+            </div>
+            <div class="random-number-container">
+                <p class="random-number"></p>
+            </div>
+        </div>
+        
+        <div class="pdf-and-start-conatiner">
+            <a href="../renderer/index.html">start over</a>
+            <a id="download-button">Download PDF</a>            
+        </div>   
+        
+        <div class="back-container">
+            <div class="back">
+                <a href="../renderer/start.html">back</a>
+            </div>
+        </div>   
+
+        <!--This will throw an error cause it hasnt been required in the main
+            or even puttiing it to type:module in here-->
+        <script type="module" src="../app/renderer.js"></script> 
+    </body> 
+    </html>
+   
+ 

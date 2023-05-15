@@ -1,0 +1,122 @@
+
+
+
+
+
+  body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+
+.retrieve-container{
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  padding: 10px;
+  font-size: 15px;
+  text-align: justify;
+  padding: 40px;
+  margin-left: 35px;
+  animation: fadeInLeft 3s;
+  width: 50%;
+  height: 200px;
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+
+  .retrieve-container span{
+    font-weight: bolder;
+    font-style: italic;
+    word-spacing: 10px;
+    text-transform: uppercase;
+  }
+
+.retrieve-container input[type="text"]{
+  text-align: center;
+  font-size: 16px; /*input text size*/
+  margin-top: 25px;
+  width: 100px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-bottom: 4px solid rgb(148, 13, 13);
+  outline: none;
+}
+/*place holder styling*/
+::placeholder {
+  font-size: 12px;
+  color: rgb(124, 112, 112);
+}
+.retrieve-button{
+  margin-top: 25px;
+}
+
+.retrieve-button a{
+  font-size: 12px;
+  padding: 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.retrieve-button a:hover{
+  
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-left: 20px; /*padding left and right will align the text to center when hoovered*/
+  padding-right: 20px;
+  background-color:aqua;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+.back-container{
+  position: relative;
+}
+
+ .back{
+  position: absolute;
+  left: 300px;
+  top: 200px;
+}
+
+.back a{
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-bottom: 0.5px rgb(54, 53, 53) solid;
+}
+
+.back a:hover{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s; 
+  color: black;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-style: italic;
+}

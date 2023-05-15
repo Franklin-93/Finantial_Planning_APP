@@ -1,72 +1,37 @@
-
- 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles_2.css">
+    <link rel="stylesheet" href="../styles/style-start-page.css">
     <title>Calculator</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    
-
 </head>
-    <body>
-        <div class="container">
+<body>
+    <div class="waver-container">
+        <span style="--i:1">H</span>
+        <span style="--i:2">E</Em></span>
+        <span style="--i:3">L</span>
+        <span style="--i:4">P</span>
+        <span style="--i:5">E</span>
+        <span style="--i:6">R</span>
+    </div>
 
-        
-    
-        <div class = "box_1">
-        <h2>Calculator</h2>
-            <form class="form-inline-1" >           
-                <div>
-                    <input type="text" id="item"  required="This is required">
-                    <label>What would you like to buy ?</label>
-                </div>
-                <div>
-                    <input type="text" id="price" required="This is required">
-                    <label>How much is the Item ?</label>
-                </div>
-                <div>
-                    <input name="lenght" id="length" required="This is required">
-                    <label>Number of months to be paying it:</label>
-                </div>
-                <div class="button_next">
-                    <button class ="button" type="text">Next</button>
-                </div> 
-            </form>
+    <div class ="intro-container">
+        <div class="intro-message">
+             <p>I am the Finnacial Planning and I am here to help you on 
+        how to be more organised and save money.</p>
+        </div>
+       
+        <div class="retrive-container">
+            <a href="../renderer/retrieve.html">Click here to retrieve your quote or press Start</a>
         </div>
 
-
-        <div id="myDiv">
-            <input id="input" required="This is required">
-            <label>How much can you pay Monthly?</label>
-            <button id="button_2">Calculate</button>
+        <!--it goes to the START page-->
+        <div class="button-start">
+            <a href="../renderer/form.html" >START</a>
         </div>
-
-        
-        <div class="output-container">
-            <p class="results-part-1"></p>
-            <p class="results-part-2"></p>
-        </div>
-
-
-        
-        <div class="pdf-start">
-            <a href="../renderer/index.html">start over</a>
-            <a id="download-button">Download PDF</a> 
-            <!--<a id="bt2" href="javascript:genPDF()">Download PDF</a>-->
-           
-        </div>
-
-        
-     <!--This will throw an error cause it hasnt been required in the main
-    or even puttiing it to type:module in here-->
-        <script type="module" src="../app/renderer.js"></script>
-
-    </body> 
-    
-    </html>
-   
- 
+    </div>   
+</body>
+</html>

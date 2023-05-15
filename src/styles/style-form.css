@@ -1,0 +1,147 @@
+
+
+/*FORM HTML*/
+body{
+
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+  
+    
+}
+
+/*FORM - BOX*/
+.form-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgb(114, 121, 121);
+    border-radius: 10px;
+    background-color: #ebebeb;
+
+}
+
+.form-box h2{
+    margin: 0 0 40px;
+    padding: 0;
+    color:  #414141;
+    text-transform: uppercase;
+  }
+
+.form-box input{
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid  #414141;
+    font-size: 15px; 
+    background-color:  #eceaea;
+
+}
+
+
+
+.button_next{
+   position: absolute;
+   margin-left: 85%;
+   margin-top: -15px;
+   font-size: small;
+  
+}
+.button_next a{
+  text-decoration: none;
+}
+.button{
+    border-bottom: none;
+    cursor: pointer;
+    background-color: #414141;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.button:hover{
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-right: 15px;
+  background-color: rgb(0, 0, 0);
+  font-style: italic;
+}
+
+.form-box form div{
+    position: relative;
+}
+
+.form-box form div label{
+  position:absolute;  
+  left:0px;
+  pointer-events: none;
+  color:#746f6f;
+  transition: .5s;
+}
+
+.form-box input:focus ~ label,
+.form-box input:valid ~ label{
+  top: -20px;  
+  color:  #414141;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-box input:focus,
+.form-box input:valid{
+  border-bottom: 2px solid #4e4f50;;
+}
+
+/*OUTPUT STYLING*/
+
+
+
+/*BACK BUTTON STYLING*/
+.back-container{
+  position: relative;
+}
+
+ .back{
+  position: absolute;
+  left: 300px;
+  top: 200px;
+}
+
+.back a{
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-bottom: 0.5px rgb(54, 53, 53) solid;
+}
+
+.back a:hover{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s; 
+  color: black;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-style: italic;
+}

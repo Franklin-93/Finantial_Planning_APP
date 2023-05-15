@@ -3,17 +3,15 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
+const pdf = require('jspdf');
 
-
-// const to validate with if/else
-const isDeveloper = process.env.NODE_ENV != "PRODCUTION";
 let mainWindow;
 
 function createMainWindow() {
     mainWindow = new BrowserWindow({
       // Create the browser window
       title: "Finantial Planning",
-      width: 750, height: 550,
+      width: 900, height: 550,
        // width: isDeveloper ? 1000: 6000, // if in dev mode will open widht with 1000px
         ///height : 600,
         autoHideMenuBar: true, // it will hide the default menu
@@ -32,7 +30,7 @@ function createMainWindow() {
   
 
 // mainWindow.loadURL("https://www.electronjs.org/docs/latest/api/browser-view");loading a URL for testing purposes
-mainWindow.loadFile(path.join(__dirname, '/src/renderer/index.html')); // file path where my folder is located
+mainWindow.loadFile(path.join(__dirname, '/src/renderer/start.html')); // file path where my folder is located
 
 // call back function that will load the page if is TRUE (LOADED)
 mainWindow.on("ready-to-show", mainWindow.show) 
@@ -69,8 +67,9 @@ app.on('window-all-closed', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-
-
+module.exports ={
+  jspdf,
+}
 /*
 
 const {app, BrowserWindow} = require("electron");

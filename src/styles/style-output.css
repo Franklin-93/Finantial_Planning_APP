@@ -1,0 +1,238 @@
+
+
+body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+.output-container{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    /*aligning div*/
+    width: 600px;
+    height: 50px;
+
+    
+    /*set animation*/
+    animation:fadeInTop 3s;
+    
+    /*display none attribute here so I can load the output in my (JavaScript)*/
+    display: none;
+}
+@keyframes fadeInTop {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.output-container .results-part-1{
+    position:absolute;
+    pointer-events: none;
+    margin-top: 35px;
+    text-align: left;
+    margin-left: 150px;
+    color: rgb(243, 240, 240);
+    padding-left: 25px;
+    border-left: 2px solid rgb(3, 255, 234);
+}
+
+.output-container .results-part-2{
+  text-align: justify;
+  position:absolute;
+  pointer-events: none;
+  margin-top: 35px;
+  text-align: left;
+  color: rgb(243, 240, 240);
+  padding-left: 25px;
+  border-left: 2px solid rgb(3, 255, 234);
+  animation:fadeInTop 3s;
+    
+  /*display none attribute here so I can load the output in my (JavaScript)*/
+  display: none;
+  line-height: 2em;
+}
+
+
+
+/*random number*/
+.quote-message-coontainer{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /*aligning div*/
+  width: 600px;
+  height: 50px;
+  margin: auto;
+  
+  /*set animation*/
+ animation:fadeInTop 3s;
+  
+  /*display none attribute here so I can load the output in my (JavaScript)*/
+  display: none;  
+  color: aliceblue;
+}
+.random-number-container{
+  height: 50px;
+  animation:fadeInTop 3s;
+}
+
+.random-number-container .random-number{
+  text-align: center;
+  width:100px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background-color: white;
+  color: black;
+  padding:10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-box-2 {
+  
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgb(114, 121, 121);
+    border-radius: 10px;
+    background-color: #ebebeb;
+
+
+     /*set animation*/
+     animation:fadeInTop 3s;
+    
+     /*display none attribute here so I can load the output in my (JavaScript)*/
+     display: none;
+}
+
+@keyframes fadeInTop {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+ 
+  .form-box-2 .output label{
+    color:#534f4f;
+    position: absolute;
+    left: 30px;
+  }
+  
+.form-box-2 input[type="text"]{
+  position:absolute;
+  bottom: 55px;
+  left: 70px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 15px; /*input text size*/
+  width: 150px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid  #686666;  
+}
+
+ #button-calculator{
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  border-bottom: none;
+  cursor: pointer;
+  background-color: #414141;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 5px;
+ }
+ 
+ #button-calculator:hover{
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-right: 15px;
+  background-color: rgb(0, 0, 0);
+  font-style: italic;
+ }
+
+
+ /*hides PDF generator / start over page*/
+ .pdf-and-start-conatiner{
+  position: absolute;
+  top: 70%;
+  right: 15px;
+  display: none;
+  padding: 10px;
+  width: 125px;
+  animation:fadeInTop 3s;
+ }
+
+ .pdf-and-start-conatiner a{
+  text-transform: uppercase;
+  margin: 15px;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+ 
+}
+
+ .pdf-and-start-conatiner a:hover{
+  width: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-left: 20px;
+  background-color:aqua;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+ }
+
+ .final_breakdown{
+  background-color: #4e4f50;
+ }
+
+
+

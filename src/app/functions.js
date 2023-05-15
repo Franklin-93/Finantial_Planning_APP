@@ -153,10 +153,18 @@
      return totalMonths;
  };
 
+// generates and random number with letter 0-9 (That will be the ID of the message)
+// It will use the same ID to retrieve the message from the database
+ function generateRandomId() {
+    const randomDecimal = Math.random();
+    const randomId = randomDecimal.toString(36).substr(2, 9);
+    return randomId;
+  };
+
    // exportiing the functions to the main where we want to use it
    export { getMonthlyValue, getMonthsDueToPay, getDecimal,
     getInteger, getRemaningDays, getRemaningDaysRounded,
-    getDifferenceLess, getDifferenceMore,
+    getDifferenceLess, getDifferenceMore, generateRandomId,
 };
   
 
