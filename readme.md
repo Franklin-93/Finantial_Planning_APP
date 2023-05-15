@@ -11,13 +11,6 @@ It helps people who wants to buy a anything and would have the option of paying 
     <img src="/images/COVER-3.png" width="400" />
 </div>
 
-## Demo Video
-* Click Play to watch
-<div style="display: flex; justify-content: center">
-        <video width="550" height="400" controls>
-        <source src="/assets/videos/APP_SIMULATION.mp4" autoplay></video>
-</div>
-
 ## Usage
 
 Install dependencies:
