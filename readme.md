@@ -13,16 +13,12 @@ It helps people who wants to buy a anything and would have the option of paying 
 
        
 ## Demo Video
-* Click Play to watch
-<div style="display: flex; justify-content: center">
-        <video width="650" height="450" controls>
-        <source src="/assets/videos/APP_SIMULATION.mp4" autoplay></video>
-</div>
+* Watch Demo below
+APP_SIMULATION.mp4 - Google Drive
 
 ## Usage
 
 Install dependencies:
-
 
 ```bash
 npm install
