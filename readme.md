@@ -13,8 +13,8 @@ It helps people who wants to buy a anything and would have the option of paying 
 
        
 ## Demo Video
-* Watch Demo below
-APP_SIMULATION.mp4 - Google Drive
+
+https://github.com/Franklin-93/Finantial_Planning_APP/assets/102427836/cdc9e5d3-86f3-4553-84a2-c39527af02f0
 
 ## Usage
 
