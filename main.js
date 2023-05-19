@@ -3,7 +3,14 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
-const pdf = require('jspdf');
+
+// importing function
+const { insertText, retrieveMessages } = require('./server/server');
+
+// SQLite Stuff (server) instaed of adding the whole thing in here I createa another folder called
+//server and adding the file path only
+let myServer = require("./server/server.js");
+
 
 let mainWindow;
 
@@ -26,8 +33,6 @@ function createMainWindow() {
           preload: path.join(__dirname, '/preload.js'),
         },
     })
-
-  
 
 // mainWindow.loadURL("https://www.electronjs.org/docs/latest/api/browser-view");loading a URL for testing purposes
 mainWindow.loadFile(path.join(__dirname, '/src/renderer/start.html')); // file path where my folder is located
@@ -52,9 +57,11 @@ app.whenReady().then(()=>{
   });
 
 
-  ipcMain.on("msg",(event,data)=>{
+
+
+/*  ipcMain.on("msg",(event,data)=>{
     console.warn(data);
-    });
+    });*/
 
 
 // Quit when all windows are closed, except on macOS. There, it's common
@@ -62,30 +69,5 @@ app.whenReady().then(()=>{
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
-})
+});
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
-
-module.exports ={
-  jspdf,
-}
-/*
-
-const {app, BrowserWindow} = require("electron");
-const {join} = require("path");
-
-app.whenReady().then(createWindow);
-
-function createWindow () {
-  const mainWindow = new BrowserWindow({
-    	width: 800, height: 700,
-	show: false,
-  });
-
-window.loadFile(join(__dirname, "../myHtmlIndex.html"));
-
-// will show the window only when is fully loaded in the back -end to voiding falshes
-window.on("ready-to-show", window.show);
-
-}*/

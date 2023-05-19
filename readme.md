@@ -7,10 +7,11 @@ It helps people who wants to buy a anything and would have the option of paying 
 * Restar button to Reload the App.
 
 
-<div style="display: flex; justify-content: center">
-    <img src="/images/COVER-3.png" width="400" />
-</div>
+ <div style="display: flex; justify-content: center">
+    <img src="/assets/images/COVER-3.png" width="400"/>
+    </div>
 
+       
 ## Demo Video
 * Click Play to watch
 <div style="display: flex; justify-content: center">

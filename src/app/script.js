@@ -45,6 +45,7 @@ function firstBreakdown(event){
     output_container.style.display = 'block'; // show div results for the item
     resultPart1.textContent = text; // appends the monthly value to the DOM
     boxForm2.style.display='block'; // displat box-form-2
+    
     event.preventDefault(); //prevents the page to load and values not being attained
 };
 
@@ -140,7 +141,7 @@ function finalBreakdown(event){
            
   text2 = "HERE IS YOUR BREADOWN | \n"+
   "Because you can pay \u20AC " + userInput + ", more than the monthly value \u20AC " + Math.round(monthlyValue)+ ")\n"+
-                 "you will take " + integerFromDifference + " months less to pay for the (" + userItem.value + ")" + "\n" +   
+                 "you will take " + integerFromDifference + " months less to pay for the (" + userItem + ")" + "\n" +   
                  "Leaving you with " + integer + " months total.";
          }
       
@@ -152,7 +153,7 @@ function finalBreakdown(event){
           
     text2 = "HERE IS YOUR BREADOWN |\n"+ 
     "Because you can pay \u20AC " + userInput + ", more than the monthly value \u20AC " + Math.round(monthlyValue)+ "\n"+
-                 "you will take " + integerFromDifference + " months & " + daysFromDifferenceMonths + " days less to pay for the (" + userItem.value + ")" + "\n" +    
+                 "you will take " + integerFromDifference + " months & " + daysFromDifferenceMonths + " days less to pay for the (" + userItem + ")" + "\n" +    
                  "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
      }
 }
@@ -191,7 +192,7 @@ else if (userInput < monthlyValue){
            
       text2 = "HERE IS YOUR BREADOWN | \n"+
       "Because you can pay \u20AC " + userInput + ", less than the monthly value \u20AC " + Math.round(monthlyValue)+ "\n"+
-                 "you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days more to pay for the (" + userItem.value + ")" + "\n" +  
+                 "you will take " + integerFromDifference_2 + " months & " + daysFromDecimal + " days more to pay for the (" + userItem + ")" + "\n" +  
                  "Leaving you with " + integer + " months and " + daysFromDecimal + " remaining days total.";
          }
  } 
@@ -204,18 +205,18 @@ else if (userInput < monthlyValue){
 
 function showFinalBreakdown(breakdown){
 
-    const backButoon = document.querySelector(".back-container");
-    const PDFStart = document.querySelector(".pdf-and-start-conatiner");
-    const quoteMessageContainer = document.querySelector(".quote-message-coontainer");
+  const backButoon = document.querySelector(".back-container");
+  const PDFStart = document.querySelector(".pdf-and-start-conatiner");
+  const quoteMessageContainer = document.querySelector(".quote-message-coontainer");
 
-    resultPart1.style.display ="none"; // Hide first results
-    boxForm2.style.display = 'none'; // hide form when button next is clicked
-    resultPart2.style.display = 'block'; // show final output results 
-    resultPart2.textContent = breakdown; // appends the final breakdown message to the DOM
+  resultPart1.style.display ="none"; // Hide first results
+  boxForm2.style.display = 'none'; // hide form when button next is clicked
+  resultPart2.style.display = 'block'; // show final output results 
+  resultPart2.textContent = breakdown; // appends the final breakdown message to the DOM
 
-    backButoon.style.display = 'none'; //hides back button
-    PDFStart.style.display = 'block';// shows the PDF generator and start page again
-    quoteMessageContainer.style.display = 'block'; // it shows the quote message and id generated when button is clicked
+  backButoon.style.display = 'none'; //hides back button
+  PDFStart.style.display = 'block';// shows the PDF generator and start page again
+  quoteMessageContainer.style.display = 'block'; // it shows the quote message and id generated when button is clicked
 
 };
 
@@ -237,18 +238,4 @@ genPDF.addEventListener("click", function (event) {
 	doc.save('@HELPER.Results.pdf');
   event.preventDefault();
 });
-
-/*
-const pdf = new jsPDF({
-  orientation: 'portrait',
-  unit: 'mm',
-  format: 'a4',
-});
-
-pdf.setTextColor(200, 0, 0);
-pdf.setFont("helvetica", "italic");
-pdf.text('Hello, world!', 10, 10);
-
-pdf.save('my-document.pdf');
-*/
 
