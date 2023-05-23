@@ -1,4 +1,5 @@
 const sqlite3 = require('sqlite3');
+const {ipcMain} = require('electron');
 
 const dbConnection = new sqlite3.Database('./database.App',(err) => {
     if (err) {
@@ -7,17 +8,16 @@ const dbConnection = new sqlite3.Database('./database.App',(err) => {
     console.log('Connected to the database.');
 });
 
+
 const tableName ="lunchTime"
 function creataTable(tableName){
     dbConnection.run(`CREATE TABLE IF NOT EXISTS ${tableName} (id INTEGER PRIMARY KEY AUTOINCREMENT, text TEXT NOT NULL)`);
 };
 
-creataTable(tableName);
+//creataTable(tableName);
 
-const myID = 822;
-const myText = 'Have your lunch now man';
-
-
+const myID=25222;
+//const myText = 'Have your lunch now man';
 
 function insertText(id, text) {
 dbConnection.run(`INSERT INTO lunchTime (id, text) VALUES (?, ?)`, [id, text], function(err) {
@@ -28,7 +28,8 @@ dbConnection.run(`INSERT INTO lunchTime (id, text) VALUES (?, ?)`, [id, text], f
 })
 };
 
-insertText(myID, myText);
+//insertText(myID, myText);
+
 
 
 
@@ -42,10 +43,17 @@ dbConnection.get(`SELECT * FROM lunchTime WHERE id = ?`, [id], (err, row) => {
 });
 }
 
-retrieveMessages(myID);
+//retrieveMessages(myID);
 
+// respond to ipcRenderer
+ipcMain.on('final:breakdown', (event, options) =>{
 
-dbConnection.close();
+  insertText(myID, options);
+  retrieveMessages(myID);
+  //console.log(options);
+});
+
+//dbConnection.close();
 
 
 module.exports = {

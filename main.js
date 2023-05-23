@@ -4,8 +4,6 @@
 const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 
-// importing function
-const { insertText, retrieveMessages } = require('./server/server');
 
 // SQLite Stuff (server) instaed of adding the whole thing in here I createa another folder called
 //server and adding the file path only
@@ -28,9 +26,10 @@ function createMainWindow() {
         
         // adding node (Integration) 
         webPreferences: {
+          //contentSecurityPolicy: "default-src 'self'; script-src 'self';",
           nodeIntegration: true,
           contextIsolation: true,
-          preload: path.join(__dirname, '/preload.js'),
+          preload: path.join(__dirname, '/preload.js'), // LET THE MAIN knows that you are using preload files
         },
     })
 
@@ -38,7 +37,13 @@ function createMainWindow() {
 mainWindow.loadFile(path.join(__dirname, '/src/renderer/start.html')); // file path where my folder is located
 
 // call back function that will load the page if is TRUE (LOADED)
-mainWindow.on("ready-to-show", mainWindow.show) 
+mainWindow.on("ready-to-show", mainWindow.show);
+
+// respond to ipcRenderer
+ipcMain.on('final:breakdown', (event, options) =>{
+  //console.log(options);
+});
+
 }
 
 //when the app is ready will load the file from the renderer
@@ -58,16 +63,13 @@ app.whenReady().then(()=>{
 
 
 
-
-/*  ipcMain.on("msg",(event,data)=>{
-    console.warn(data);
-    });*/
-
-
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 });
+
+
+
 
