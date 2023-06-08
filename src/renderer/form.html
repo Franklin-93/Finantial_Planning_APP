@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../styles/style-output.css">
     <title>Calculator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script type="module" src="../app/renderer.js"></script>
      
 </head>
     <body>     
@@ -38,7 +37,10 @@
                 </div> 
             </form>
         </div>
-    
+        <div style="display: flex; justify-content: center">
+            <img src="/assets/images/COVER-3.png" width="400" />
+        </div>
+
         <!--OUTPUT -->
         <div class="output-container">
             <p class="results-part-1"></p>
@@ -75,8 +77,7 @@
 
         <!--This will throw an error cause it hasnt been required in the main
             or even puttiing it to type:module in here-->
-     
-  
+        <script type="module" src="../app/script.js"></script> 
     </body> 
     </html>
    
