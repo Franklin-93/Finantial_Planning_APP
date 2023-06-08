@@ -1,40 +1,17 @@
 {
-  "name": "financial_planning_calculator",
+  "name": "helper_app",
   "version": "1.0.0",
-  "description": "Finantial Planning Helper",
+  "description": "It helps people who wants to buy a anything and would have the option of paying in installments selected by them, that could be either for more or less. On the top of that there is a functionality that asks them HOW MUCH they could pay for it.",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder",
-    "dist": "npm run build && electron-builder --publish never"
+    "start": "electron ."
   },
-  "author": "FRANKLIN",
+  "author": "Franklin",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^24.1.2",
-    "electron-builder": "^23.6.0",
-    "electron-installer-dmg": "^4.0.0",
-    "electron-installer-windows": "^3.0.0",
-    "electron-packager": "^17.1.1"
-  },
-  "build": {
-    "productName": "HELPER",
-    "directories": {
-      "output": "dist"
-    },
-    "win": {
-      "target": "nsis",
-      "icon": "build/icon.ico"
-    },
-    "linux": {
-      "target": "deb",
-      "icon": "build/icon.png"
-    }
+    "electron": "^25.0.0"
   },
   "dependencies": {
-    "@electron/rebuild": "^3.2.13",
-    "jspdf": "^2.5.1",
-    "mysql2": "^3.3.1",
     "sqlite3": "^5.1.6"
   }
 }

@@ -1,27 +1,6 @@
  // GLOBAL static variable that holds the days of the month
  const DAYS_OF_THE_MONTH = 30;
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+    
  /**
   * Finding MONTHLY value
   * Item value = 3600 (total)

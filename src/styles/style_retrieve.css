@@ -27,6 +27,23 @@
   height: 200px;
 }
 
+.retrieved-data{
+  display: none; /* hides from the page until button is clicked then modify from js file*/
+  background-color: rgb(238, 237, 237);
+  color: black;
+  width: 80%;
+  height: 150px;
+  border-radius: 5px;
+  animation: fadeInLeft 3s;
+}
+
+.data{
+  margin-bottom:20px;
+  padding:10px;
+  width: fit-content;
+  text-align: center;
+
+}
 @keyframes fadeInLeft {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -50,6 +67,9 @@
   border-bottom: 4px solid rgb(148, 13, 13);
   outline: none;
 }
+
+
+
 /*place holder styling*/
 ::placeholder {
   font-size: 12px;
@@ -81,6 +101,18 @@
   box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 
+
+
+
+
+
+.back-container {
+  position: absolute;
+  bottom: 20px; /* Adjust the value to your desired position from the bottom */
+  right: 20px; /* Adjust the value to your desired position from the right */
+}
+
+/*
 .back-container{
   position: relative;
 }
@@ -89,7 +121,7 @@
   position: absolute;
   left: 300px;
   top: 200px;
-}
+}*/
 
 .back a{
   padding: 5px;

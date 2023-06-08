@@ -114,7 +114,19 @@ body{
 
 
 
+
+
+
+
+
+
+
 /*BACK BUTTON STYLING*/
+.back-container {
+  position: absolute;
+  bottom: 20px; /* Adjust the value to your desired position from the bottom */
+  right: 20px; /* Adjust the value to your desired position from the right */
+}/*
 .back-container{
   position: relative;
 }
@@ -124,6 +136,7 @@ body{
   left: 300px;
   top: 200px;
 }
+*/
 
 .back a{
   padding: 5px;

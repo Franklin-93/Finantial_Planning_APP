@@ -8,16 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div class="retrieve-container">
         <div class="message">
             <p>Please retrieve your quote by using your <span>id.</span></p>
         </div>
         <div class="input">
-            <input type="text" id="input" placeholder="ENTER ID" required="This is required">
+            <input type="text" id="input-id" placeholder="ENTER ID" required="This is required">
         </div>
         <div class="retrieve-button">
-            <a>Retrieve</a> 
+            <a class="btn">Retrieve</a> 
+        </div>
+    </div>
+
+    <div class="retrieved-data">
+        <div>
+            <p>here is your breakdown</p>
+        </div>
+        <div>
+             <p class="data"></p>
         </div>
     </div>
 
@@ -25,9 +33,7 @@
         <div class="back">
             <a href="../renderer/start.html">back</a>
         </div>
-        
     </div>
-
-
+    <script src="../app/retrieve.js"></script>
 </body>
 </html>
