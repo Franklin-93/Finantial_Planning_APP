@@ -140,17 +140,9 @@
     return randomId;
   };
 
-   // exportiing the functions to the main where we want to use it
+   // exporting functions to RENDERER
    export { getMonthlyValue, getMonthsDueToPay, getDecimal,
     getInteger, getRemaningDays, getRemaningDaysRounded,
     getDifferenceLess, getDifferenceMore, generateRandomId,
 };
   
-
-/*module.exports = {
-        getMonthlyValue, getMonthsDueToPay, getDecimal,
-
-        getInteger, getRemaningDays, getRemaningDaysRounded,
-    
-        getDifferenceLess, getDifferenceMore,
-    }*/

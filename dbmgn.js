@@ -1,8 +1,8 @@
 
 const sqlite3 = require('sqlite3');
-//const {ipcMain, ipcRenderer} = require('electron');
 
-const tableName ="WORLDS";
+const tableName ="breadownMessages"; // stores table name
+
 // Create database connection
 const dbConnection = new sqlite3.Database('./database.db',(err) => {
   if (err) {
@@ -25,7 +25,7 @@ function createTable(tableName) {
   );
 }
 
-// Insert 
+// Insert data
 function insertText(text, retrieve) {
   dbConnection.run(`INSERT INTO ${tableName} (text, retrieve_ID ) VALUES (?, ?)`, [text, retrieve], function(err) {
     if (err) {
@@ -35,18 +35,7 @@ function insertText(text, retrieve) {
   });
 };
 
-/*function retrieveMessages(id, breakdown){
-  dbConnection.get(`SELECT * FROM ${tableName} WHERE retrieve_ID = ?`, [id], (err, row) => {
-    if (err) {
-    return console.error(err.message);
-    }
-
-    breakdown = row.text;
-      console.log("Data trieved:\n");
-      console.log(breakdown);
-  });
-};*/
-
+// Retrieve data
 function retrieveMessages(id) {
   return new Promise((resolve, reject) => {
     dbConnection.get(`SELECT * FROM ${tableName} WHERE retrieve_ID = ?`, [id], (err, row) => {
@@ -54,15 +43,13 @@ function retrieveMessages(id) {
         reject(err);
         return;
       }
-
       const breakdown = row.text;
-      console.log("Data retrieved:\n");
-      //console.log(breakdown);
+      // console.log("Data retrieved:\n");
+      // console.log(breakdown);
       resolve(breakdown);
     });
   });
 }
-
 
 // Drop Table
 function dropTable(tableName) {
@@ -75,10 +62,11 @@ function dropTable(tableName) {
   });
 }
 
-
+// exporting function
 module.exports={
   createTable,
   insertText,
   retrieveMessages,
   dropTable
 };
+

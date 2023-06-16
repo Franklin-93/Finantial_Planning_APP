@@ -1,74 +1,36 @@
 
 
-  body {
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: sans-serif;
-  }
+body {
+  background-color: #000000;
+  overflow: hidden;
+  font-family: sans-serif;
+}                               
 
 
 .retrieve-container{
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 55%;
   transform: translate(-50%, -50%);
+  animation: fadeInLeft 3s;
   color: aliceblue;
-  padding: 10px;
   font-size: 15px;
-  text-align: justify;
-  padding: 40px;
-  margin-left: 35px;
-  animation: fadeInLeft 3s;
-  width: 50%;
-  height: 200px;
 }
-
-.retrieved-data{
-  display: none; /* hides from the page until button is clicked then modify from js file*/
-  background-color: rgb(238, 237, 237);
-  color: black;
-  width: 80%;
-  height: 150px;
-  border-radius: 5px;
-  animation: fadeInLeft 3s;
-}
-
-.data{
-  margin-bottom:20px;
-  padding:10px;
-  width: fit-content;
-  text-align: center;
-
-}
-@keyframes fadeInLeft {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-  }
-
-  .retrieve-container span{
-    font-weight: bolder;
-    font-style: italic;
-    word-spacing: 10px;
-    text-transform: uppercase;
-  }
 
 .retrieve-container input[type="text"]{
   text-align: center;
-  font-size: 16px; /*input text size*/
+  font-size: 15px; /*input text size*/
   margin-top: 25px;
   width: 100px;
-  padding: 5px;
-  background-color: rgb(255, 255, 255);
+  padding:5px;
+  background-color: rgb(255, 251, 251);
   border-radius: 5px;
   border-bottom: 4px solid rgb(148, 13, 13);
-  outline: none;
 }
 
-
+:focus {
+  outline: 0.5px solid rgb(46, 46, 47);
+}
 
 /*place holder styling*/
 ::placeholder {
@@ -87,11 +49,9 @@
 }
 
 .retrieve-button a:hover{
-  
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
-  transition: 0.5s;  
   padding-left: 20px; /*padding left and right will align the text to center when hoovered*/
   padding-right: 20px;
   background-color:aqua;
@@ -102,26 +62,50 @@
 }
 
 
+/*FINAL Breakdown container*/
+.data-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* hides from the page until button is clicked then modify from js file*/
+  background-color: rgb(238, 237, 237);
+  color: black;
+  width: 80%;
+  height: 150px;
+  border-radius: 5px;
+  animation: fadeInLeft 3s;
+}
 
+.breakdown-title{
+  color: rgb(158, 6, 6);
+  text-align: center;
+  text-transform: uppercase;
+}
 
+.breakdown-title strong{
+    color: rgb(158, 6, 6);
+    font-weight: bolder;
+}
 
+.data{
+  margin-bottom:20px;
+  padding:10px;
+  width: fit-content;
+  text-align: center;
+}
 
+@keyframes fadeInLeft {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+
+/*back contyainer*/
 .back-container {
   position: absolute;
   bottom: 20px; /* Adjust the value to your desired position from the bottom */
   right: 20px; /* Adjust the value to your desired position from the right */
 }
-
-/*
-.back-container{
-  position: relative;
-}
-
- .back{
-  position: absolute;
-  left: 300px;
-  top: 200px;
-}*/
 
 .back a{
   padding: 5px;
@@ -136,10 +120,44 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.5s;
-  transition: 0.5s; 
   color: black;
   background-color: white;
   padding-left: 10px;
   padding-right: 10px;
   font-style: italic;
 }
+
+
+ /*hides PDF generator / start over page*/
+ .pdf-and-start-conatiner-2{
+  position: absolute;
+  top: 70%;
+  right: 15px;
+  display: none;
+  padding: 10px;
+  width: 125px;
+  animation:fadeInTop 3s;
+ }
+
+ .pdf-and-start-conatiner-2 a{
+  text-transform: uppercase;
+  margin: 15px;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+}
+
+ .pdf-and-start-conatiner-2 a:hover{
+  width: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;  
+  padding-left: 20px;
+  background-color:aqua;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+ }

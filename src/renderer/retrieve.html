@@ -5,30 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style_retrieve.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+     <!--retrieve container-->
     <div class="retrieve-container">
         <div class="message">
             <p>Please retrieve your quote by using your <span>id.</span></p>
         </div>
         <div class="input">
-            <input type="text" id="input-id" placeholder="ENTER ID" required="This is required">
+            <input type="text" id="input-id" placeholder="ENTER ID">
         </div>
         <div class="retrieve-button">
             <a class="btn">Retrieve</a> 
         </div>
     </div>
 
-    <div class="retrieved-data">
+    <!--data container-->
+    <div class="data-container">
         <div>
-            <p>here is your breakdown</p>
+            <p class="breakdown-title">Here is your<strong> breakdown</strong></p>
         </div>
         <div>
              <p class="data"></p>
         </div>
     </div>
 
+    <!--PDF generattor-->
+    <div class="pdf-and-start-conatiner-2">
+        <a href="../renderer/start.html">start over</a>
+        <a class="download-button-2">Download PDF</a>            
+    </div>  
+
+     <!--back container-->
     <div class="back-container">
         <div class="back">
             <a href="../renderer/start.html">back</a>

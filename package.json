@@ -9,9 +9,21 @@
   "author": "Franklin",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^25.0.0"
+    "electron": "^25.0.0",
+    "electron-builder": "^24.4.0",
+    "electron-packager": "^17.1.1"
   },
   "dependencies": {
+    "jspdf": "^2.5.1",
     "sqlite3": "^5.1.6"
+  },
+  "build": {
+    "appId": "Finantial.App",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
   }
 }
