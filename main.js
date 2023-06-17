@@ -92,6 +92,11 @@ app.whenReady().then(() => {
   });
 });
 
+// Close the database connection
+app.on('before-quit', () => {
+  myServer.closeDatabaseConnection();
+});
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();

@@ -62,11 +62,23 @@ function dropTable(tableName) {
   });
 }
 
+// Close database connection
+function closeDatabaseConnection() {
+  dbConnection.close((err) => {
+    if (err) {
+      console.error(err.message);
+    } else {
+      console.log('Database connection closed.');
+    }
+  });
+};
+
 // exporting function
 module.exports={
   createTable,
   insertText,
   retrieveMessages,
-  dropTable
+  dropTable,
+  closeDatabaseConnection
 };
 
