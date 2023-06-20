@@ -11,11 +11,9 @@
     <img src="/assets/images/electron_app_img.png" width="400"/>
 </div>
 
-## Demo Video
+## Demo Video using the following link
 
-    <video src="/assets/video/packaged_version.mp4" width="400" controls></video>
-
-
+https://drive.google.com/file/d/18z7Xk9HVLl5OJsuOAGDFSPLobikRDl_9/view?usp=drive_link
 
 ## Download the App for (Windows) using the following link .exe
 
