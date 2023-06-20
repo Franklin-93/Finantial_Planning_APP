@@ -12,9 +12,9 @@
 </div>
 
 ## Demo Video
-<div style="display: flex; justify-content: center">
+
     <video src="/assets/video/packaged_version.mp4" width="400" controls></video>
-</div>
+
 
 
 ## Download the App for (Windows) using the following link .exe
