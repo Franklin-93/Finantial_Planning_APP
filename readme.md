@@ -1,20 +1,25 @@
-# Finantial Planning App
+# About the App
 
-It helps people who wants to buy a anything and would have the option of paying in installments selected by them, that could be either for more or less. On the top of that there is a functionality that asks them HOW MUCH they could pay for it.
+* It serves to individuals seeking to purchase items by providing them with the flexibility to choose their preferred installment plan, whether it be for a greater or lesser duration. Furthermore, it offers a unique feature that allows users to determine the amount they can comfortably pay towards their purchase.
+
+* The app collects user input regarding their desired purchase, item price, and preferred number of installments. Upon clicking the "Next" button, it presents an initial breakdown with the monthly cost and prompts the user to specify their payment amount on top of that. It then generates a final breakdown, assigns a unique ID for retrieval, and generates a PDF.
+
+* The idea for this project originated from my college assignment in the module of cross-platform development. Our task was to create a cross-platform app using the Electron software framework. Given my passion for finance and critical thinking, I decided to leverage the abundance of online tutorials and resources, including YouTube, to develop something unique. The primary objective behind this project was to assist individuals in enhancing their financial organization. Although the solution is simple, it effectively addresses the problem at hand.
 
 
-* It generate a PDF file displaying the (Final Breakdown).
-* Restar button to Reload the App.
+<div style="display: flex; justify-content: center">
+    <img src="/assets/images/electron_app_img.png" width="400"/>
+</div>
 
-
- <div style="display: flex; justify-content: center">
-    <img src="/assets/images/COVER-3.png" width="400"/>
-    </div>
-
-       
 ## Demo Video
+<div style="display: flex; justify-content: center">
+    <img src="/assets/video/packaged_version.mp4" width="400"/>
+</div>
 
-https://github.com/Franklin-93/Finantial_Planning_APP/assets/102427836/cdc9e5d3-86f3-4553-84a2-c39527af02f0
+
+## Download the App for (Windows) using the following link .exe
+
+https://drive.google.com/file/d/1IUVCoIDdGqXsSFnPggnzcNZ7we6eKV_Y/view
 
 ## Usage
 
@@ -22,6 +27,10 @@ Install dependencies:
 
 ```bash
 npm install
+```
+
+```bash
+npm install sqlite3
 ```
 
 Run:
