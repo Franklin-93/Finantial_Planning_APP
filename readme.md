@@ -13,7 +13,7 @@
 
 ## Demo Video
 <div style="display: flex; justify-content: center">
-    <img src="/assets/video/packaged_version.mp4" width="400"/>
+    <video src="/assets/video/packaged_version.mp4" width="400" controls></video>
 </div>
 
 
