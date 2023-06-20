@@ -29,6 +29,8 @@ Install dependencies:
 npm install
 ```
 
+Install Database:
+
 ```bash
 npm install sqlite3
 ```
