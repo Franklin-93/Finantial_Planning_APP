@@ -13,8 +13,9 @@
 
 ## Demo Video
 
-    <video src="/assets/video/packaged_version.mp4" width="400" controls></video>
-
+<video width="400" height="300" controls>
+  <source src="/assets/video/MY_APP.mp4" type="video/mp4">
+</video>
 
 
 ## Download the App for (Windows) using the following link .exe
