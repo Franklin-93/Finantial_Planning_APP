@@ -11,9 +11,11 @@
     <img src="/assets/images/electron_app_img.png" width="400"/>
 </div>
 
-## Demo Video using the following link
+## Demo Video 
 
-    <video src="/assets/video/packaged_version.mp4" width="400" controls></video>
+<video width="400" height="300" controls>
+    <source src="/assets/video/MY_APP.mp4" type="video/mp4">
+</video>
 
 
 
