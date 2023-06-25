@@ -11,11 +11,10 @@
     <img src="/assets/images/electron_app_img.png" width="400"/>
 </div>
 
-## Demo Video
+## Demo Video using the following link
 
-<video width="400" height="300" controls>
-  <source src="/assets/video/MY_APP.mp4" type="video/mp4">
-</video>
+    <video src="/assets/video/packaged_version.mp4" width="400" controls></video>
+
 
 
 ## Download the App for (Windows) using the following link .exe
