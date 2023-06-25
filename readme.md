@@ -13,11 +13,7 @@
 
 ## Demo Video 
 
-<video width="400" height="300" controls>
-    <source src="/assets/video/MY_APP.mp4" type="video/mp4">
-</video>
-
-
+https://github.com/FranklinArruda/Finantial_Planning_APP/assets/102427836/49035707-dda9-4dea-8034-fdac38861d3d
 
 ## Download the App for (Windows) using the following link .exe
 
