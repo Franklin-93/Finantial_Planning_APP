@@ -13,10 +13,14 @@
 
 ## Demo Video 
 
+<<<<<<< HEAD
 [![Video Thumbnail](/assets/video/video_thumbnail.jpg)](https://raw.githubusercontent.com/your_username/your_repository/master/assets/video/MY_APP.mp4)
 
 
 
+=======
+https://github.com/FranklinArruda/Finantial_Planning_APP/assets/102427836/49035707-dda9-4dea-8034-fdac38861d3d
+>>>>>>> f4b3d7e21ef77d03b71b4a77257fdf15c3aae6fe
 
 ## Download the App for (Windows) using the following link .exe
 
