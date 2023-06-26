@@ -13,9 +13,8 @@
 
 ## Demo Video 
 
-<video width="400" height="300" controls>
-    <source src="/assets/video/MY_APP.mp4" type="video/mp4">
-</video>
+[![Video Thumbnail](/assets/video/video_thumbnail.jpg)](https://raw.githubusercontent.com/your_username/your_repository/master/assets/video/MY_APP.mp4)
+
 
 
 
