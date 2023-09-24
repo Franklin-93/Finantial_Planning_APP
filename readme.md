@@ -12,8 +12,6 @@
 </div>
 
 ## Demo Video 
-
-<<<<<<< HEAD
 [![Video Thumbnail](/assets/video/video_thumbnail.jpg)](https://raw.githubusercontent.com/your_username/your_repository/master/assets/video/MY_APP.mp4)
 
 
