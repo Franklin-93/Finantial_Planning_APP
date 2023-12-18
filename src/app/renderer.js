@@ -263,7 +263,7 @@ genPDF.addEventListener("click", function (event) {
   // Display the content text at the adjusted position
   doc.text(20, contentY, text2, { align: "left" }); // Align the text to the left
 
-	doc.save('@HELPER.Results.pdf');
+	doc.save('HELPER.Results.pdf');
   event.preventDefault();
 });
 

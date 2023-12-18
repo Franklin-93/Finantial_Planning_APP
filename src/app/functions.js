@@ -34,15 +34,15 @@
         let days = length * DAYS_OF_THE_MONTH;                // 4 x 30 = 120 days 
         let totalDays = (itemValue * days / userStatus);      // 280 * 120 = 33600
         let monthsToPay = totalDays / DAYS_OF_THE_MONTH;      // 33600 / 340 = 98.82 days
-                                                                 // 98.82 / 30 days = 3.29 months                                                       
+                                                              // 98.82 / 30 days = 3.29 months                                                       
    /**  MONTHS DUE                 |  DECIMAL PART
     *  ============                |  ==============
     * 340.x = 280*120              |  100.X = 30*29
     *  340.x = 33600               |   100.X = 870 
     *    x = 33600                 |    X = 870
     *        /340                  |      /100
-    *     x = 98.82                |       X = 7.8 DAYS (MUST BE ROUNDED TO UP)
-    *        /30 = 3.29 Months     |
+    *     x = 98.82                |       X = 8.7 DAYS (MUST BE ROUNDED TO UP)
+    *     /30 = 3.29 Months     |
     */
      return monthsToPay; 
  };

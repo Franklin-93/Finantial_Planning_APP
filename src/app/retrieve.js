@@ -4,8 +4,6 @@ const retrieveContainer = document.querySelector(".retrieve-container");
 const retrievedDataContainer = document.querySelector(".data-container");
 const genPDF = document.querySelector(".download-button-2");
 
-
-
 /**
  * Sends request to the Main process by providing ID from the DOM 
  * If ID is true will return the desired message from Main to here
