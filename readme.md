@@ -14,8 +14,6 @@
 ## Demo Video 
 https://github.com/FranklinArruda/Finantial_Planning_APP/assets/102427836/49035707-dda9-4dea-8034-fdac38861d3d
 
-## Download the App for (Windows) using the following link .exe
-https://drive.google.com/file/d/1IUVCoIDdGqXsSFnPggnzcNZ7we6eKV_Y/view
 
 ## Usage
 
@@ -43,3 +41,10 @@ npm start
 If your `NODE_ENV` is set to `development` then you will have the dev tools enabled and available in the menu bar. It will also open them by default.
 
 When set to `production`, the dev tools will not be available.
+
+## Download the App for (windows) by following instructions in the link below:
+
+https://github.com/FranklinArruda/financial-planning-app/releases
+
+
+
