@@ -11,7 +11,7 @@
     <img src="/assets/images/electron_app_img.png" width="400"/>
 </div>
 
-## Demo Video 
+## Video Demo
 https://github.com/FranklinArruda/Finantial_Planning_APP/assets/102427836/49035707-dda9-4dea-8034-fdac38861d3d
 
 
