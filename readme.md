@@ -7,9 +7,11 @@
 * The idea for this project originated from my college assignment in the module of cross-platform development. Our task was to create a cross-platform app using the Electron software framework. Given my passion for finance and critical thinking, I decided to leverage the abundance of online tutorials and resources, including YouTube, to develop something unique. The primary objective behind this project was to assist individuals in enhancing their financial organization. Although the solution is simple, it effectively addresses the problem at hand.
 
 
-<div style="display: flex; justify-content: center">
-    <img src="/assets/images/electron_app_img.png" width="400"/>
-</div>
+
+
+<img src="https://github.com/user-attachments/assets/e0c51524-7e88-497f-a338-3c03d0e98144" alt="Screenshot_1" width="600" height="400"/>
+
+
 
 ## Video Demo
 https://github.com/FranklinArruda/Finantial_Planning_APP/assets/102427836/49035707-dda9-4dea-8034-fdac38861d3d
